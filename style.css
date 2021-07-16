@@ -1,0 +1,164 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Dosis', sans-serif;
+}
+
+button {
+	font-family: 'Dosis', sans-serif;
+}
+
+header {
+	display: flex;
+	width: 80%;
+	height: 10vh;
+	margin: auto;
+	align-items: center;
+
+}
+
+.nav-links, .cart {
+	display: flex;
+}
+
+.logo-cont img{
+	width: 70px;
+}
+
+.logo-cont {
+	flex: 1;
+}
+
+nav {
+	flex: 6;
+}
+
+.nav-links {
+	justify-content: space-around;
+	list-style: none;
+
+}
+
+.nav-link {
+	font-size: 18px;
+	text-decoration: none; 
+	color: green;
+}
+
+.cart {
+	display: flex;
+}
+
+.cart img {
+	width: 30px;
+}
+
+.cover img {
+	width: 60vh;
+	filter: drop-shadow(0px 5px 3px black);
+	animation: drop 1.5s ease;
+}
+
+.presentation {
+	display: flex;
+	width: 80%;
+	margin: auto;
+	min-height: 80vh;
+	align-items: center;
+}
+
+.intro {
+	flex: 1;
+}
+
+.cover {
+	flex: 1;
+}
+
+.intro-text h1{
+	font-size: 44px;
+	font-weight: 500;
+	background-image: linear-gradient(to right, green, #40ff00);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.cta {
+	padding: 50px 0px 0px 0px;
+}
+
+.cta-select {
+	border: 2px solid green;
+	background: transparent;
+	color: green;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.cta-add {
+	border: none;
+	background: green;
+	color: white;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 16px;
+	margin: 30px 0px 0px 30px;
+}
+
+.big-circle {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: -1;
+	opacity: 0.5;
+	height: 80%;
+}
+
+.mid-circle {
+	position: absolute;
+	top: 30%;
+	right: 40%;
+	z-index: -1;
+	opacity: 0.5;
+	height: 60%;
+}
+
+@keyframes drop{
+	0%{
+		opacity: 0;
+		transform: translateY(-80px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.presentation {
+		flex-direction: column;
+	}
+	.intro {
+		margin-top: 5vh;
+		text-align: center;
+	}
+	.intro-text h1 {
+		font-size: 30px;
+	}
+	.intro-text p {
+		font-size: 16px;
+	}
+	.cta {
+		padding: 10px 0px 0px 0px;
+	}
+	.big-circle, .mid-circle {
+		opacity: 0.3;
+	}
+}
